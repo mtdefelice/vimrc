@@ -1,8 +1,33 @@
-set encoding=utf-8
+" Enter the current millenium. The existance of this file should auto-apply
+" this setting also
+set nocompatible
+
+" Show ruler, line numbers
 set ruler
 set nu
 
-syntax on
+" Add search results overview to menu
+set shortmess-=S
 
-au BufNewFile,BufRead *.py,*.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
-au BufNewFile,BufRead *.js,*.html,*.css set tabstop=2 softtabstop=2 shiftwidth=2
+" Case-insensitivity w/ smartcase
+set ignorecase smartcase
+
+" Search down into subfolders; enable tab-completion for all file-related tasks
+set path+=**
+set wildmenu
+
+" Enable syntax highlighting
+syntax enable
+
+" Default indent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+
+" Filetype detection
+filetype plugin indent on
+
+" Create the `tags` file (may need to install ctags first). Use ^] to jump to tag under cursor.
+" command! GenTags !ctags -R --exclude=node_modules --exclude=dist --exclude=.git .
