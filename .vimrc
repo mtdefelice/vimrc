@@ -41,6 +41,9 @@ filetype plugin indent on
 " Start plugins. Ref: https://github.com/junegunn/vim-plug. Remember to install with :PlugInstall
 call plug#begin()
 
+" vim-polygot
+Plug 'sheerun/vim-polyglot'
+
 " FZF integration (installed first w/ apt)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -51,13 +54,9 @@ let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0 } }
 Plug 'preservim/nerdtree'
 nnoremap <F5> :NERDTreeToggle<CR>
 
-" indentLine
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_setColors = 0
-" let g:indentLine_char = '︙'
-
 " End plugins
 call plug#end()
 
-" Create the `tags` file (may need to install ctags first). Use ^] to jump to tag under cursor.
+" Create the `tags` file (may need to install ctags first). Use ^] to jump to tag under cursor, ^t to jump back.
 " command! GenTags !ctags -R --exclude=node_modules --exclude=dist --exclude=.git .
+" command! GenTagsG !git ls-files | ctags -L -
