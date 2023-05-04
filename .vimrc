@@ -28,8 +28,8 @@ call plug#begin()
 " FZF integration (installed first w/ apt)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-nnoremap <C-P> :Files<CR>
 let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0 } }
+let g:fzf_preview_window = ['hidden,up,40%', 'ctrl-/']
 
 " GFiles if vim is run within a git repo, Files if not
 function! FindFiles()
@@ -43,6 +43,9 @@ endfunction
 
 " Map this function to the command FF
 command! FF call FindFiles()
+
+" Map now to ^P
+nnoremap <C-P> :FF<CR>
 
 " vim-polygot
 Plug 'sheerun/vim-polyglot'
