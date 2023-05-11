@@ -4,9 +4,15 @@ set nocompatible
 " Do not select line numbers with the mouse
 " set mouse+=a
 
+" Dark background
+set bg=dark
+
 " Show ruler, line numbers
 set ruler
 set nu
+
+" Always show statusbar
+set ls=2
 
 " Case-insensitivity w/ smartcase
 set ignorecase smartcase
