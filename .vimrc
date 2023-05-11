@@ -56,6 +56,9 @@ nnoremap <C-P> :FF<CR>
 " vim-polygot
 Plug 'sheerun/vim-polyglot'
 
+" lightline
+Plug 'itchyny/lightline.vim'
+
 " End plugins
 call plug#end()
 
