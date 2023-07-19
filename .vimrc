@@ -1,6 +1,10 @@
 " Disable vi compatibility. The existance of this file should auto-apply this setting.
 set nocompatible
 
+" For M1 Macs, helps prevent 'redrawtime exceeded' errors; more stable syntax
+" highlighting
+set re=2
+
 " Do not select line numbers with the mouse
 " set mouse+=a
 
