@@ -72,7 +72,7 @@ function! GenTags()
 	if v:shell_error
 		!ctags -R .
 	else
-		!git ls-files | ctags -L -
+		!git ls-files | ctags -f "$(git rev-parse --show-toplevel)/tags" -L -
 	endif
 endfunction
 
